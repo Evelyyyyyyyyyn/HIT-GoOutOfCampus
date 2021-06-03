@@ -34,6 +34,6 @@ jobs:
           && chromedriver --version
     - name: Start clock
       env:
-        ID: ${{ secrets.ID }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        ID: ${{ secrets.ID1 }}
+        PASSWORD: ${{ secrets.PASSWORD1 }}
       run: python out.py
