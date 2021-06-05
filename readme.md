@@ -5,14 +5,12 @@ HIT每日定时申请出校脚本
 
 ## 使用方法
 
-```
 1. fork本项目，项目中点击上方`Settings` ---> 左边的`Secrets` ---> `New repository secret`添加两个`secret`：
 
     - ID: `学号`
     - PASSWORD: `统一认证密码`
 
 1. 点击上方`Actions` --> 左边找到`申请出校` --> 点击启用
-```
 
 ## 感谢
 
