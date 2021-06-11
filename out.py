@@ -73,6 +73,10 @@ def pick_date():
     # touch_action = webdriver.TouchActions(driver)
     # d_picker_indicator = d_picker.find_element_by_class_name('weui-picker__indicator')
     # touch_action.scroll_from_element(d_picker_indicator, 0, -item_offset).perform()
+    
+    # print current date
+    cur_date = driver.find_element_by_id('rqlscx').text
+    print('current date picked: ', cur_date)
 
     # 注： 2、3需要在前面添加 option.add_experimental_option('w3c', False)， 1不用
 # ==============
