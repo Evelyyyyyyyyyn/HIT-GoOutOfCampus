@@ -31,18 +31,17 @@ sleep(1)
 
 # 进入申请出校页面
 ## method1: 直接输网址, 进不去
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/yqxx')
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
-# 从学工主页点击进入
-# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
-# driver.execute_script('wjdc()')
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/yqxx')
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
+## method2: 从学工主页点击进入
+driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
+driver.execute_script('wjdc()')
 # print(driver.page_source)
 # 点击“新建”
 driver.find_element_by_class_name('right_btn').click()
 sleep(1)
 # 新建页面
 # 出校类型 点击“临时出校”
-driver.find_elements_by_xpath
 driver.find_element_by_xpath("//label[@for='cxlx01']").click()
 # 出校日期选第一个（今天）
 driver.find_element_by_id('rqlscx').click()
@@ -64,4 +63,4 @@ driver.execute_script('document.getElementsByClassName("weui-dialog__btn primary
 
 driver.quit()
 
-print('申请临时出校完成')
+print('申请today临时出校完成')
