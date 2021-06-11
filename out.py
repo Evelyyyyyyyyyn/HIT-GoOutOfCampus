@@ -75,15 +75,20 @@ def pick_date():
     # touch_action.scroll_from_element(d_picker_indicator, 0, -item_offset).perform()
 
     # 注： 2、3需要在前面添加 option.add_experimental_option('w3c', False)， 1不用
+    
+    ## find current selection
+    style = d_picker.find_element_by_class_name('weui-picker__content').get_attribute('style')
+    print(style)
+    
 # ==============
 
 pick_date() # 滑动选择第二天，注释掉则选择当天
-#%% 点击确定
 sleep(.5)
+#%% 点击确定
 driver.find_element_by_id('weui-picker-confirm').click()
-# print current date
-cur_date = driver.find_element_by_id('rqlscx').text
-print('current date picked: ', cur_date)
+# print current date,,,failed
+# cur_date = driver.find_element_by_id('rqlscx').text
+# print('current date picked: ', cur_date)
 
 
 # 填写出校理由
