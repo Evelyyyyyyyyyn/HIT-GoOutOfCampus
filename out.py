@@ -23,15 +23,15 @@ driver.get('https://ids.hit.edu.cn/authserver/')
 driver.find_element_by_id('mobileUsername').send_keys(USERNAME)
 driver.find_element_by_id('mobilePassword').send_keys(PASSWORD)
 driver.find_element_by_id('load').click()
-sleep(.5)
+sleep(1)
 
 # 进入申请出校页面
 ## method1: 直接输网址, 进不去
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/yqxx')
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/yqxx')
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
 ## method2: 从学工主页点击进入
-# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
-# driver.execute_script('wjdc()')
+driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
+driver.execute_script('wjdc()')
 # print(driver.page_source)
 # 点击“新建”
 driver.find_element_by_class_name('right_btn').click()
