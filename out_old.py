@@ -45,8 +45,11 @@ sleep(1)
 driver.find_element_by_xpath("//label[@for='cxlx01']").click()
 # 出校日期选第一个（今天）
 driver.find_element_by_id('rqlscx').click()
-sleep(1)
+sleep(.5)
 driver.find_element_by_id('weui-picker-confirm').click()
+# print current date
+cur_date = driver.find_element_by_id('rqlscx').text
+print('current date picked: ', cur_date)
 # 填写出校理由
 driver.find_element_by_id('cxly').send_keys(choice(reasons))
 # 勾选一堆
