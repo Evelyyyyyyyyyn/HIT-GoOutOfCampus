@@ -41,7 +41,7 @@ sleep(1)
 driver.find_element_by_xpath("//label[@for='cxlx01']").click()
 # 出校日期选择
 driver.find_element_by_id('rqlscx').click()
-sleep(1)
+sleep(.5)
 
 #%% =============
 def pick_date():
@@ -66,7 +66,7 @@ def pick_date():
     # 2. 使用TouchActions - flick_element()
     touch_action = webdriver.TouchActions(driver)
     d_picker_indicator = d_picker.find_element_by_class_name('weui-picker__indicator')
-    touch_action.flick_element(d_picker_indicator, xoffset=0, yoffset=-item_offset, speed=2*item_offset)
+    touch_action.flick_element(d_picker_indicator, xoffset=0, yoffset=-item_offset, speed=1.3*item_offset)
     touch_action.perform()
 
     # 3. 使用TouchAction - scroll_from_element
@@ -83,8 +83,8 @@ def pick_date():
 # ==============
 
 pick_date() # 滑动选择第二天，注释掉则选择当天
-sleep(.5)
 #%% 点击确定
+sleep(.5)
 driver.find_element_by_id('weui-picker-confirm').click()
 # print current date,,,failed
 # cur_date = driver.find_element_by_id('rqlscx').text
