@@ -23,7 +23,8 @@ driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=optio
 
 print('正在申请出校...')
 # 统一认证登录
-driver.get('https://ids.hit.edu.cn/authserver/')
+# driver.get('https://ids.hit.edu.cn/authserver/')
+driver.get('http://ivpn.hit.edu.cn')
 driver.find_element_by_id('mobileUsername').send_keys(USERNAME)
 driver.find_element_by_id('mobilePassword').send_keys(PASSWORD)
 driver.find_element_by_id('load').click()
@@ -34,7 +35,8 @@ sleep(1)
 # driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/yqxx')
 # driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsCxsq')
 ## method2: 从学工主页点击进入
-driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
+# driver.get('https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsHome')    
+driver.get('http://xg-hit-edu-cn-s.ivpn.hit.edu.cn:1080/zhxy-xgzs/xg_mobile/xsHome')
 driver.execute_script('wjdc()')
 # print(driver.page_source)
 # 点击“新建”
